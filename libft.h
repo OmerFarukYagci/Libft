@@ -6,12 +6,14 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 15:48:07 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/08 15:48:34 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/08 17:36:06 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <stddef.h>
 
 int	ft_atoi(const char *nptr);
 int	ft_isalnum(int c);

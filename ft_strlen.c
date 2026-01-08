@@ -6,7 +6,18 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:43:21 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/08 13:43:23 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/08 17:58:24 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
