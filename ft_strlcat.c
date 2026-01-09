@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 14:59:28 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/09 15:55:45 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/09 19:18:06 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	d_lng = ft_strlen(dst);
 	s_lng = ft_strlen(src);
+	if (size > d_lng)
+		sum = d_lng + s_lng;
+	else
+		sum = s_lng + size;
 	while (src[i] && size > (d_lng + 1))
 	{
 		dst[d_lng] = src[i];
@@ -29,5 +33,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[d_lng] = '\0';
-	return (src);
+	return (sum);
 }
