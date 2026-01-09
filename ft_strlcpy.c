@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 18:15:17 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/09 10:54:18 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/09 10:57:49 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	ss;
 	size_t	i;
 
-	ss = ft_strlen(src);
 	i = 0;
 	if (size != 0)
 	{
@@ -28,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		}
 	}
 	dst[i] = '\0';
-	return (ss);
+	return (ft_strlen(src));
 }
