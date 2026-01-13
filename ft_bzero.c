@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:28:49 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/13 12:32:20 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/13 13:04:28 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		pt[i] = 0;
+		pt[i] = '\0';
 		i++;
 	}
 }
