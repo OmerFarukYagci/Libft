@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 18:03:32 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/11 13:37:16 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/15 18:26:52 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	x;
 
 	i = 0;
-	if (little[0] == '\0')
-		return ((char *)&big[i]);
 	while (big[i] != '\0' && i < len)
 	{
 		x = 0;
