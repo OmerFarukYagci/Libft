@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:53:25 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/15 09:34:17 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/15 18:17:46 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		dp[i] = sp[i];
 		i++;
 	}
-
 	return (dest);
 }
