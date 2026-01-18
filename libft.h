@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 15:48:07 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/18 18:25:18 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/18 23:39:10 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_putchar_fd(char c, int fd);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_itoa(int n);
 
 #endif
