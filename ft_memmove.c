@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 19:10:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/16 13:49:03 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/18 07:47:23 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			((unsigned char *)dest)[i] = ((const unsigned char *)src)[i];
 			i++;
 		}
-	}	
+	}
 	else
 	{
 		i = n;
