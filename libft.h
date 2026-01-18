@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 15:48:07 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/18 18:17:23 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/18 18:25:18 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stddef.h>
 
-int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -31,6 +30,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t total, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
