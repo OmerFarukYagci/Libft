@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 09:42:59 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/19 12:42:47 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/19 15:42:16 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	sublen;
 	size_t	slen;
 
+	if (s == NULL)
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 	{
@@ -36,7 +38,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = malloc(sublen + 1);
 	if (sub == NULL)
 		return (NULL);
-
 	ft_strlcpy(sub, s + start, sublen + 1);
 	return (sub);
 }
