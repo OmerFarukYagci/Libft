@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 09:42:59 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/19 15:42:16 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/19 15:43:46 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sublen = slen - start;
 	else
 		sublen = len;
-
 	sub = malloc(sublen + 1);
 	if (sub == NULL)
 		return (NULL);
