@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 11:58:00 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/20 13:45:22 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/24 22:22:18 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*new;
 
 	if (s == NULL || f == NULL)
-		return ;
+		return (NULL);
 	new = malloc(ft_strlen(s) + 1);
 	if (new == NULL)
 		return (NULL);

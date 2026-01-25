@@ -27,6 +27,7 @@ int	main(void)
 	ft_lstadd_front(&head, new_node);
 
 	/* Sonucu yazdırma */
+	printf("Liste boyutu: %d\n", ft_lstsize(head));
 	temp = head;
 	while (temp)
 	{
@@ -39,6 +40,7 @@ int	main(void)
 
 /*
 
+Liste boyutu: 4
 Yeni
 42
 Merhaba
