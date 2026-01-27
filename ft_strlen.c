@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 13:43:21 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/25 17:48:35 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/27 15:54:51 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
-	if (s == NULL)
-		return (0);
 	i = 0;
 	while (s[i])
 		i++;

@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 09:22:21 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/27 09:36:01 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/27 10:00:44 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*temp;
+
 	if (lst == NULL || del == NULL)
 		return ;
 	while (*lst != NULL)
+	{
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
+	}
+	*lst = NULL;
 }
