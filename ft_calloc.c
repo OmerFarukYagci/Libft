@@ -6,20 +6,20 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 13:48:42 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/29 16:05:54 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/30 12:24:29 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	*ft_calloc(size_t total, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*pt;
 
-	pt = malloc(total * size);
+	pt = malloc(nmemb * size);
 	if (pt == NULL)
 		return (NULL);
-	ft_bzero(pt, total * size);
+	ft_bzero(pt, nmemb * size);
 	return (pt);
 }
