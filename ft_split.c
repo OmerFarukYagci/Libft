@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/30 19:30:43 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/31 18:28:14 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,20 @@ char	**ft_split(char const *s, char c)
 	int		tw;
 	char	**arrays;
 
+	if (s == NULL)
+		return (NULL);
 	tw = total_words(s, c);
-	arrays = malloc();
-	
+	arrays = malloc(sizeof(char *) * (tw + 1));
+	if (arrays == NULL)
+		return (NULL);
+	arrays[tw] = NULL;
+
+	return (arrays);
 }
 
 #include <stdio.h>
 
 int main()
 {
-	printf("%d", total_words(" abc ", ' '));
+	
 }
