@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/31 18:48:59 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/31 19:56:21 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,36 @@ static void	all_free(char **ar, size_t n)
 	free(ar);
 }
 
+static char	**words_printer(char const *s, char c, char **arrays)
+{
+	size_t	i;
+	size_t	wlen;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			wlen = 0;
+			while (s[i + wlen] && s[i + wlen] != c)
+				wlen++;
+			arrays[j] = ft_substr(s, i, wlen);
+			if (arrays[j] == NULL)
+			{
+				all_free(arrays, j);
+				return (NULL);
+			}
+			j++;
+			i += wlen;
+		}
+		else
+			i++;
+	}
+	return (arrays);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	tw;
@@ -56,8 +86,7 @@ char	**ft_split(char const *s, char c)
 	if (arrays == NULL)
 		return (NULL);
 	arrays[tw] = NULL;
-
-	return (arrays);
+	return (words_printer(s, c, arrays));
 }
 
 #include <stdio.h>
