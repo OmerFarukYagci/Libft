@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/31 18:28:14 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/31 18:48:59 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,22 @@ static int	total_words(char const *str, char ch)
 	return (m);
 }
 
+static void	all_free(char **ar, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		free(ar[i]);
+		i++;
+	}
+	free(ar);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	int		tw;
+	size_t	tw;
 	char	**arrays;
 
 	if (s == NULL)
