@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/31 22:12:25 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/31 22:16:53 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	total_words(char const *str, char ch)
 	return (m);
 }
 
-static void	all_free(char **ar, size_t n)
+static void	*all_free(char **ar, size_t n)
 {
 	size_t	i;
 
@@ -42,6 +42,7 @@ static void	all_free(char **ar, size_t n)
 		i++;
 	}
 	free(ar);
+	return (NULL);
 }
 
 static char	**words_printer(char const *s, char c, char **arrays)
@@ -61,10 +62,7 @@ static char	**words_printer(char const *s, char c, char **arrays)
 				wlen++;
 			arrays[j] = ft_substr(s, i, wlen);
 			if (arrays[j] == NULL)
-			{
-				all_free(arrays, j);
-				return (NULL);
-			}
+				return (all_free(arrays, j));
 			j++;
 			i = i + wlen;
 		}
