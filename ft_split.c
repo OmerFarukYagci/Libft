@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/31 19:56:21 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/01/31 22:12:25 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	total_words(char const *str, char ch)
 		m++;
 	while (str[i])
 	{
-		if (str[i] == ch && (str[i + 1] != ch) && (str[i + 1] != '\0'))
+		if ((str[i] == ch) && (str[i + 1] != ch) && (str[i + 1] != '\0'))
 			m++;
 		i++;
 	}
@@ -57,7 +57,7 @@ static char	**words_printer(char const *s, char c, char **arrays)
 		if (s[i] != c)
 		{
 			wlen = 0;
-			while (s[i + wlen] && s[i + wlen] != c)
+			while ((s[i + wlen] != '\0') && (s[i + wlen] != c))
 				wlen++;
 			arrays[j] = ft_substr(s, i, wlen);
 			if (arrays[j] == NULL)
@@ -66,7 +66,7 @@ static char	**words_printer(char const *s, char c, char **arrays)
 				return (NULL);
 			}
 			j++;
-			i += wlen;
+			i = i + wlen;
 		}
 		else
 			i++;
@@ -93,5 +93,13 @@ char	**ft_split(char const *s, char c)
 
 int main()
 {
-	
+	int i = 0;
+	char **a;
+
+	a = ft_split("abc ddd", ' ');
+	while (i <= 2)
+	{
+		printf("%s\n", a[i]);
+		i++;
+	}
 }
