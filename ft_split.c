@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/02/01 11:17:39 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/01 11:20:40 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,44 +85,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	arrays[tw] = NULL;
 	return (words_printer(s, c, arrays));
-}
-
-#include <stdio.h>
-
-int main()
-{
-	int i;
-	char **a;
-
-	i = 0;
-	a = ft_split("abc ddd", ' ');
-	while (i < 3) // a[i] de yazılabilir ama en sondaki (null) çıktısını alamayız.
-	{
-		printf("%s\n", a[i]);
-		i++;
-	}
-
-	i = 0;
-	a = ft_split(" ", ' ');
-	while (i < 1)
-	{
-		printf("%s\n", a[i]);
-		i++;
-	}
-
-	i = 0;
-	a = ft_split("zxc,,vbn", ',');
-	while (i < 3)
-	{
-		printf("%s\n", a[i]);
-		i++;
-	}
-
-	i = 0;
-	a = ft_split("", ',');
-	while (i < 1)
-	{
-		printf("%s\n", a[i]);
-		i++;
-	}
 }
