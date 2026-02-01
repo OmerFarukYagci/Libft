@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 12:55:03 by omyagci           #+#    #+#             */
-/*   Updated: 2026/02/01 10:36:35 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/01 10:53:12 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ static void	*all_free(char **ar, size_t n)
 
 static char	**words_printer(char const *s, char c, char **arrays)
 {
-	size_t	i;
-	size_t	wlen;
-	size_t	j;
+	unsigned int	i;
+	size_t			wlen;
+	size_t			j;
 
 	i = 0;
 	j = 0;
