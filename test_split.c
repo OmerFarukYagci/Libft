@@ -89,14 +89,7 @@ int main()
 		printf("%s\n", a[i]);
 		i++;
 	}
-
-	i = 0;
-	a = ft_split(" ", ' ');
-	while (i < 1)
-	{
-		printf("%s\n", a[i]);
-		i++;
-	}
+	all_free(a, 2);
 
 	i = 0;
 	a = ft_split("zxc,,vbn", ',');
@@ -105,6 +98,16 @@ int main()
 		printf("%s\n", a[i]);
 		i++;
 	}
+	all_free(a, 2);
+
+	i = 0;
+	a = ft_split(" ", ' ');
+	while (i < 1)
+	{
+		printf("%s\n", a[i]);
+		i++;
+	}
+	all_free(a, 0);
 
 	i = 0;
 	a = ft_split("", ',');
@@ -113,4 +116,5 @@ int main()
 		printf("%s\n", a[i]);
 		i++;
 	}
+	all_free(a, 0);
 }
