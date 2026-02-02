@@ -6,11 +6,11 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 11:26:46 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/20 13:01:57 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/02 16:13:41 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
