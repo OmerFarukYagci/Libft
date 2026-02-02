@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 12:33:41 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/18 07:16:57 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/02 14:52:09 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		i++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)&s[i]);
 	return (NULL);
 }
