@@ -6,7 +6,7 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 12:53:25 by omyagci           #+#    #+#             */
-/*   Updated: 2026/02/02 15:59:26 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/02 17:33:08 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*sp;
 	size_t				i;
 
-	if (dest == src)
+	if (dest == src || n == 0)
 		return (dest);
 	dp = (unsigned char *)dest;
 	sp = (const unsigned char *)src;
