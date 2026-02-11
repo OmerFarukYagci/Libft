@@ -6,12 +6,11 @@
 /*   By: omyagci <omyagci@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 11:45:16 by omyagci           #+#    #+#             */
-/*   Updated: 2026/01/27 18:19:12 by omyagci          ###   ########.fr       */
+/*   Updated: 2026/02/11 03:34:41 by omyagci          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
